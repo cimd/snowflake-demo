@@ -2,8 +2,8 @@ export const snowflakeConnection = async () => {
   const snowflake = (<any>window).snowflake.sdk.createConnection(
     // connection options
     {
-      account: 'technipfmc-data',
-      username: 'christian.daquino@technipfmc.com',
+      account: import.meta.env.VITE_SNOWFLAKE_ACCOUNT,
+      username: import.meta.env.VITE_SNOWFLAKE_USERNAME,
       database: 'IDSPROD',
       authenticator: 'EXTERNALBROWSER',
       warehouse: 'REPORTING_WH',
